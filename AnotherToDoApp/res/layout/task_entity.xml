@@ -1,47 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="fill_parent"
-    android:layout_height="fill_parent"
-    android:orientation="horizontal" >
-
-    <CheckBox
-        android:id="@+id/todo_checkBox"
-        android:layout_width="wrap_content"
-        android:layout_height="fill_parent"
-        android:text=""
-        />
-
-    <LinearLayout
-        android:id="@+id/todo_text"
-        android:layout_width="136dp"
-        android:layout_height="fill_parent"
-        android:layout_weight="1"
-        android:gravity="center|left"
-        android:orientation="vertical" >
-
-        <TextView
+<TextView xmlns:android="http://schemas.android.com/apk/res/android"
+    
             android:id="@+id/todo_name"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
             android:hint="ToDo Item"
+            android:gravity="center"
             android:textAppearance="?android:attr/textAppearanceMedium" />
 
-        <TextView
-            android:id="@+id/todo_timeStamp"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:hint="ToDo Timestamp"
-            android:textAppearance="?android:attr/textAppearanceSmall"
-            android:textSize="10dp" />
-    </LinearLayout>
-
-    <Button
-        android:id="@+id/todo_shareButton"
-        android:layout_width="38dp"
-        android:layout_height="fill_parent"
-        android:layout_alignLeft="@+id/todo_text"
-        android:layout_gravity="center|right"
-        android:text="S"
-        android:textAppearance="?android:attr/textAppearanceSmall" />
-
-</LinearLayout>
+   

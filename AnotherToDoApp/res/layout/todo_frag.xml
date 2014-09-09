@@ -1,26 +1,47 @@
-<?xml version="1.0" encoding="utf-8"?>
+<!-- <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#fff" >
+    android:background="#fff"
+    tools:context="com.example.anothertodoapp.MainActivity" >
 
-    <!-- TextView
+    TextView
         android:id="@+id/tvFragFirst"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_centerHorizontal="true"
         android:layout_centerVertical="true"
         android:textSize="26dp"
-        android:text="TextView" /> -->
+        android:text="TextView" />
     
     <ListView
         android:id="@+id/todo_listView"
         android:orientation="horizontal"
         android:layout_width="fill_parent"
         android:layout_height="fill_parent"
+        tools:listitem="@layout/task_entity"
         />
     
     
     
+    
+</RelativeLayout> -->
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="view.MainActivity" >
+
+    <ListView
+        android:id="@+id/view_todoList"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentRight="true"
+        tools:listitem="@layout/task_entity" >
+	
+	    </ListView>
     
 </RelativeLayout>

@@ -5,7 +5,7 @@ public class Task {
 	private String class_name;
 	protected int taskID;
 	protected String group;
-	protected String status;
+	protected boolean status;
 	protected String taskName;
 
 	public String getClass_name() {
@@ -17,7 +17,7 @@ public class Task {
 		this.class_name = class_name;
 	}
 	
-	public Task(int taskID, String group, String status, String taskName) {
+	public Task(int taskID, String group, boolean status, String taskName) {
 		this.taskID = taskID;
 		this.group = group;
 		this.status = status;
@@ -46,12 +46,12 @@ public class Task {
 	}
 
 
-	public String getStatus() {
+	public boolean getStatus() {
 		return status;
 	}
 
 
-	public void setStatus(String status) {
+	public void setStatus(boolean status) {
 		this.status = status;
 	}
 
