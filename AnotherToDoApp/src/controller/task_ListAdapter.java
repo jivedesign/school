@@ -43,40 +43,21 @@ public class task_ListAdapter extends ArrayAdapter<Task> {
 	}
 
 	@Override
-	public View getView(int position, View convertView, ViewGroup parent) {
+	public View getView(final int position, View convertView, ViewGroup parent) {
 
+		// Major contribs from :
 		// http://www.mysamplecode.com/2012/07/android-listview-checkbox-example.html
 
 		View row = convertView;
 		LayoutInflater inflater = ((Activity) context).getLayoutInflater();
 		row = inflater.inflate(layoutResourceId, parent, false);
 
-		// TaskListHolder holder = new TaskListHolder();
-
-		// ViewHolder holder = null;
-		// Log.v("ConvertView", String.valueOf(position));
-		//
-		// if (convertView == null) {
-		// LayoutInflater vi = (LayoutInflater)getSystemService(
-		// Context.LAYOUT_INFLATER_SERVICE);
-		// convertView = vi.inflate(R.layout.country_info, null);
-
-		// holder = new ViewHolder();
-
-		// holder.code = (TextView) convertView.findViewById(R.id.code);
-		// holder.name = (CheckBox) convertView.findViewById(R.id.checkBox1);
-
-		// TaskListHolder holder = new TaskListHolder();
-
 		TaskListHolder holder = null;
 		Log.v("ConvertView", String.valueOf(position));
 
-		
-		// if (row == null) {
 		LayoutInflater vi = (LayoutInflater) getContext().getSystemService(
 				Context.LAYOUT_INFLATER_SERVICE);
 		row = vi.inflate(R.layout.task_entity, null);
-		//
 
 		holder = new TaskListHolder();
 
@@ -89,22 +70,19 @@ public class task_ListAdapter extends ArrayAdapter<Task> {
 
 			public void onClick(View v) {
 				CheckBox cb = (CheckBox) v;
-				Task task = (Task) cb.getTag();
-				// Toast.makeText(getApplicationContext(),
-				// "Clicked on Checkbox: " + cb.getText() +
-				// " is " + cb.isChecked(),
-				// Toast.LENGTH_LONG).show();
+				// Task task = (Task) cb.getTag();
+				Task task = taskList.get(position);
 
-				// Utils.changeStateFromStatus(task, v);
+//				Log.d("onclick", "Click status: " + cb.isChecked());
+//
+//				Log.d("onclick",
+//						"todo status from list bEFORE: " + task.getStatus());
 
 				task.setStatus(cb.isChecked());
+//				Log.d("onclick",
+//						"todo status from list AFTER: " + task.getStatus());
 			}
 		});
-		// } else {
-		// holder = (TaskListHolder) row.getTag();
-		//
-		// }
-		//
 
 		Task task = taskList.get(position);
 
@@ -112,14 +90,6 @@ public class task_ListAdapter extends ArrayAdapter<Task> {
 		holder.todo_name.setText(task.getTaskName());
 
 		holder.todo_name.setTag(task);
-
-		// OLD STUFF
-
-		// holder.task = list.get(position);
-		// holder.todo_name = (CheckBox)row.findViewById(R.id.todo_name);
-		// row.setTag(holder);
-		//
-		// holder.todo_name.setText(holder.task.getTaskName());
 
 		return row;
 
