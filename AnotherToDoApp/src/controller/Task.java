@@ -1,5 +1,14 @@
 package controller;
 
+import android.content.res.ColorStateList;
+import android.content.res.XmlResourceParser;
+import android.graphics.Paint;
+import android.util.Log;
+import android.view.View;
+import android.widget.TextView;
+
+import com.example.anothertodoapp.R;
+
 public class Task {
 
 	private String class_name;
@@ -66,16 +75,36 @@ public class Task {
 	
 	}
 	
-	
-	
-	//Serialization???
-	
-	public static void getTaskInfo (int taskID) {
-		// Using taskID, gets the tasks associated group, status, and name, then returns them in a list
-		// 
-		// needs to access file
-		
-	}
+//	
+//	public void changeStatus(View v) {
+//		TextView task_textview = (TextView) v.findViewById(R.id.todo_name);
+//		
+//		// CHANGES THE STATE OF THE TASK
+//		// Used this for the StrikeTrhoguh: http://stackoverflow.com/questions/9786544/creating-a-strikethrough-text-in-android
+//		
+//		if (this.status == false) {
+//			
+//			Log.d("onclick", "todo status from list: " + this.status);
+//			Log.d("onclick", "todo Name from list: " + this.taskName);
+//			
+//			this.status = true;
+//									
+//			task_textview.setPaintFlags(task_textview.getPaintFlags() | Paint.STRIKE_THRU_TEXT_FLAG);
+//			
+//			Log.d("onclick", "todo status from list: " + this.status);
+//		} else {
+//			Log.d("onclick", "todo status from list: " + this.status);
+//			Log.d("onclick", "todo Name from list: " + this.taskName);
+//			
+//			this.status = false;
+//			task_textview.setPaintFlags(task_textview.getPaintFlags() & (~Paint.STRIKE_THRU_TEXT_FLAG));
+//			Log.d("onclick", "todo status from list: " + this.status);
+//		}
+//		
+//		
+//		
+//		
+//	}
 	
 	
 }

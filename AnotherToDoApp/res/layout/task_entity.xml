@@ -1,11 +1,32 @@
 <?xml version="1.0" encoding="utf-8"?>
-<TextView xmlns:android="http://schemas.android.com/apk/res/android"
-    
-            android:id="@+id/todo_name"
-            android:layout_width="fill_parent"
-            android:layout_height="fill_parent"
-            android:hint="ToDo Item"
-            android:gravity="center"
-            android:textAppearance="?android:attr/textAppearanceMedium" />
 
-   
+<!--
+     android:clickable="true"
+    android:onClick="onClick"
+-->
+<!-- android:background="@drawable/selectedbackground" -->
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:id="@+id/todo_entity_body"
+     >
+    
+    
+    <CheckBox
+    android:id="@+id/todo_checkBox"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    
+  />
+
+<TextView
+    android:id="@+id/todo_name"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:gravity="center"
+    android:textColor="#000"
+    android:hint="Item Task"
+    android:textAppearance="?android:attr/textAppearanceMedium"
+    />
+
+</RelativeLayout>
