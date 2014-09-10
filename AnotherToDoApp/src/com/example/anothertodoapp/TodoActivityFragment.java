@@ -53,8 +53,32 @@ public class TodoActivityFragment extends Fragment implements OnItemClickListene
 		todoList.add(task3);
 		Task task4 = new Task(1,"todo", false, "Todo One"); 
 		todoList.add(task4);
-		Task task5 = new Task(1,"todo", true, "Banana"); 
+		Task task5 = new Task(1,"todo", false, "Banana"); 
 		todoList.add(task5);
+
+		Task task6 = new Task(1,"todo", false, "Banana"); 
+		todoList.add(task6);
+		Task task7 = new Task(1,"todo", false, "Banana"); 
+		todoList.add(task7);
+		Task task8 = new Task(1,"todo", false, "Banana"); 
+		todoList.add(task8);
+		Task task9 = new Task(1,"todo", false, "Banana"); 
+		todoList.add(task9);
+		Task task10 = new Task(1,"todo", false, "Banana"); 
+		todoList.add(task10);
+		Task task11 = new Task(1,"todo", false, "Banana"); 
+		todoList.add(task11);
+		Task task12 = new Task(1,"todo", false, "Banana"); 
+		todoList.add(task12);
+		Task task13 = new Task(1,"todo", false, "Banana"); 
+		todoList.add(task13);
+		Task task14 = new Task(1,"todo", false, "Banana"); 
+		todoList.add(task14);
+		Task task15 = new Task(1,"todo", false, "Banana"); 
+		todoList.add(task15);
+		Task task16 = new Task(1,"todo", false, "Banana"); 
+		todoList.add(task16);
+		
 		
 		// Pump listadapter full of task_entities which contain items of todoList		
 		task_ListAdapter tla = new task_ListAdapter(getActivity(), R.layout.todo_frag, todoList);

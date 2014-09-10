@@ -15,8 +15,7 @@
     <CheckBox
     android:id="@+id/todo_checkBox"
     android:layout_width="fill_parent"
-    android:layout_height="fill_parent"
-    
+    android:layout_height="60dp"
   />
 
 <TextView
@@ -25,8 +24,10 @@
     android:layout_height="fill_parent"
     android:gravity="center"
     android:textColor="#000"
+    android:layout_margin="12dp"
     android:hint="Item Task"
-    android:textAppearance="?android:attr/textAppearanceMedium"
+    android:textStyle="bold"
+    android:textAppearance="?android:attr/textAppearanceLarge"
     />
 
 </RelativeLayout>

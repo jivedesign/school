@@ -73,14 +73,14 @@ public class task_ListAdapter extends ArrayAdapter<Task> {
 				// Task task = (Task) cb.getTag();
 				Task task = taskList.get(position);
 
-//				Log.d("onclick", "Click status: " + cb.isChecked());
-//
-//				Log.d("onclick",
-//						"todo status from list bEFORE: " + task.getStatus());
+			//	Log.d("onclick", "Click status: " + cb.isChecked());
+
+				Log.d("onclick",
+						"todo status from list bEFORE: " + task.getStatus());
 
 				task.setStatus(cb.isChecked());
-//				Log.d("onclick",
-//						"todo status from list AFTER: " + task.getStatus());
+				Log.d("onclick",
+						"todo status from list AFTER: " + task.getStatus());
 			}
 		});
 
