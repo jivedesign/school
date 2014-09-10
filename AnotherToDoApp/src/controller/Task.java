@@ -9,13 +9,18 @@ import android.widget.TextView;
 
 import com.example.anothertodoapp.R;
 
-public class Task {
+import java.io.Serializable;
 
+public class Task implements Serializable {
+
+	//SERIALIZABLE REFERENCE: http://www.coderzheaven.com/2012/07/25/serialization-android-simple-example/
+	
 	private String class_name;
 	protected int taskID;
 	protected String group;
 	protected boolean status;
 	protected String taskName;
+	
 
 	public String getClass_name() {
 		return getClass_name();

@@ -1,5 +1,9 @@
 package com.example.anothertodoapp;
 
+import java.io.File;
+import java.io.FileNotFoundException;
+import java.io.IOException;
+import java.io.OptionalDataException;
 import java.util.ArrayList;
 
 import controller.Task;
@@ -45,6 +49,8 @@ public class TodoActivityFragment extends Fragment implements OnItemClickListene
 		
 		// taskItem = SOME METHOD TO POPULATE TODOLIST
 		
+		
+		
 		Task task1 = new Task(1,"todo", false, "This is my first todo!"); 
 		todoList.add(task1);
 		Task task2 = new Task(1,"todo", true, "Todo One"); 
@@ -60,7 +66,7 @@ public class TodoActivityFragment extends Fragment implements OnItemClickListene
 		todoList.add(task6);
 		Task task7 = new Task(1,"todo", false, "Banana"); 
 		todoList.add(task7);
-		Task task8 = new Task(1,"todo", false, "Banana"); 
+		Task task8 = new Task(1,"todo", false, "Ziss iz my Banana task"); 
 		todoList.add(task8);
 		Task task9 = new Task(1,"todo", false, "Banana"); 
 		todoList.add(task9);
@@ -78,6 +84,36 @@ public class TodoActivityFragment extends Fragment implements OnItemClickListene
 		todoList.add(task15);
 		Task task16 = new Task(1,"todo", false, "Banana"); 
 		todoList.add(task16);
+		
+		
+		
+		//save the object
+        try {
+			Utils.saveObject(task1);
+		} catch (FileNotFoundException e1) {
+			// TODO Auto-generated catch block
+			e1.printStackTrace();
+		} catch (IOException e1) {
+			// TODO Auto-generated catch block
+			e1.printStackTrace();
+		}
+         
+        // Get the Object
+        Task task = null;
+		try {
+			task = (Task) Utils.readObject(new File("/anotherToDoApp.bin"));
+		} catch (OptionalDataException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		} catch (ClassNotFoundException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		} //get the serialized object from the sdcard and caste it into the Person class.
+
+		
 		
 		
 		// Pump listadapter full of task_entities which contain items of todoList		
