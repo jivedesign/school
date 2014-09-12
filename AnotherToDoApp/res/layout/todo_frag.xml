@@ -13,12 +13,13 @@
         android:layout_height="306dp"
         android:layout_weight="0.90"
         tools:listitem="@layout/task_entity" 
-        android:longClickable="true"/>
+        />
 
     <Button
         android:id="@+id/add_Button"
-        android:layout_width="fill_parent"
+        android:layout_width="50sp"
         android:layout_height="50sp"
-        android:layout_gravity="center|bottom" />
+        android:layout_gravity="center|bottom" 
+        android:background="@drawable/ic_add_icon"/>
 
 </LinearLayout>

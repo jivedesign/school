@@ -183,12 +183,16 @@ public class TodoActivityFragment extends Fragment implements
 						new DialogInterface.OnClickListener() {
 							public void onClick(DialogInterface dialog, int id) {
 								todoList.remove(position);
+								Log.d("onclick", "********* Deleted Task ");
 								setup_adapter();
 							}
 						})
 				.setPositiveButton("Archive",
 						new DialogInterface.OnClickListener() {
 							public void onClick(DialogInterface dialog, int id) {
+								Log.d("onclick", "********* ARCHIVE ");
+								Task task = todoList.get(position);
+								task.setGroup("archive");
 							}
 						});
 		AlertDialog alertDialog = editDialog.create();
