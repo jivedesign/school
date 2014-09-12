@@ -16,9 +16,9 @@ public class Task implements Serializable {
 	//SERIALIZABLE REFERENCE: http://www.coderzheaven.com/2012/07/25/serialization-android-simple-example/
 	
 	private String class_name;
-	protected int taskID;
-	protected String group;
-	protected boolean status;
+	protected int taskID = 0;
+	protected String group = "todo";
+	protected boolean status = false;
 	protected String taskName;
 	
 
