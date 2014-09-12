@@ -27,6 +27,7 @@
     android:layout_margin="12dp"
     android:hint="Item Task"
     android:textStyle="bold"
+    android:longClickable="true"
     android:textAppearance="?android:attr/textAppearanceLarge"
     />
 

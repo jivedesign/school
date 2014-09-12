@@ -1,23 +1,22 @@
 package controller;
 
 import java.util.ArrayList;
-import java.util.List;
-
-import com.example.anothertodoapp.R;
-import com.example.anothertodoapp.Utils;
 
 import android.app.Activity;
+import android.app.AlertDialog;
 import android.content.Context;
+import android.content.DialogInterface;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
-import android.widget.Button;
 import android.widget.CheckBox;
 import android.widget.TextView;
-import android.widget.AdapterView.OnItemClickListener;
-import android.widget.Toast;
+import android.widget.AdapterView.OnItemLongClickListener;
+
+import com.example.anothertodoapp.R;
 
 public class task_ListAdapter extends ArrayAdapter<Task> {
 
@@ -73,8 +72,6 @@ public class task_ListAdapter extends ArrayAdapter<Task> {
 				// Task task = (Task) cb.getTag();
 				Task task = taskList.get(position);
 
-			//	Log.d("onclick", "Click status: " + cb.isChecked());
-
 				Log.d("onclick",
 						"todo status from list bEFORE: " + task.getStatus());
 
@@ -83,7 +80,9 @@ public class task_ListAdapter extends ArrayAdapter<Task> {
 						"todo status from list AFTER: " + task.getStatus());
 			}
 		});
+		
 
+		
 		Task task = taskList.get(position);
 
 		holder.todo_checkBox.setChecked(task.getStatus());
@@ -94,5 +93,11 @@ public class task_ListAdapter extends ArrayAdapter<Task> {
 		return row;
 
 	}
+	
+
+	
+	
+	
+		
 
 }

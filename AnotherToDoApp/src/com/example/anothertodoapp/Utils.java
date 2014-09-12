@@ -20,6 +20,9 @@ import controller.Task;
 
 public class Utils {
 
+	private static int LastID = 0;
+	
+	
 	public static void moveTo(int taskID) {
 		// Takes in a taskID, finds the task and switches its group to either "todo" or "archive"
 		
@@ -67,6 +70,23 @@ public class Utils {
         
         return task;
 		
+	}
+	
+	
+	public static int getNewID() {
+		// Gives new ID value. 
+		
+		if (LastID == 0) {
+			LastID = 1;
+			Log.d("onclick", "********* NEW ID: " + LastID);
+			
+			return LastID;
+			
+		}
+		LastID = LastID + 1;
+		Log.d("onclick", "********* NEW ID: " + LastID);
+		
+		return LastID;
 	}
 	
 	

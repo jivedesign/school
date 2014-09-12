@@ -3,14 +3,17 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context="view.MainActivity" >
+    tools:context="view.MainActivity"
+    android:background="#fff" 
+    >
 
     <ListView
         android:id="@+id/todo_listView"
         android:layout_width="match_parent"
         android:layout_height="306dp"
         android:layout_weight="0.90"
-        tools:listitem="@layout/task_entity" />
+        tools:listitem="@layout/task_entity" 
+        android:longClickable="true"/>
 
     <Button
         android:id="@+id/add_Button"
